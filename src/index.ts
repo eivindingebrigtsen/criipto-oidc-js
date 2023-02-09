@@ -108,7 +108,6 @@ export async function codeExchange(
         Authorization: "Basic " + btoa(`${encodeURIComponent(configuration.client_id)}:${options.client_secret}`)
       } : {})
     },
-    credentials: 'omit',
     body: body.toString()
   });
 
@@ -126,7 +125,6 @@ export async function userInfo(
     headers: {
       Authorization: `Bearer ${accessToken}`
     },
-    credentials: 'omit',
   });
 
   const payload = await response.json();

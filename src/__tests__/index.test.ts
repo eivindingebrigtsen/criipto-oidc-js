@@ -51,7 +51,6 @@ describe('codeExchange', () => {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      credentials: 'omit',
       body: `grant_type=authorization_code&code=${code}&client_id=${encodeURIComponent(configuration.client_id)}&redirect_uri=${redirect_uri}&code_verifier=${code_verifier}`
     });
   });
@@ -82,7 +81,6 @@ describe('codeExchange', () => {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      credentials: 'omit',
       body: `grant_type=authorization_code&code=${code}&client_id=${encodeURIComponent(configuration.client_id)}&redirect_uri=${redirect_uri}&code_verifier=${code_verifier}`
     });
   });
@@ -116,7 +114,6 @@ describe('codeExchange', () => {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Basic ' + btoa(`${encodeURIComponent(configuration.client_id)}:${client_secret}`)
       },
-      credentials: 'omit',
       body: `grant_type=authorization_code&code=${code}&client_id=${encodeURIComponent(configuration.client_id)}&redirect_uri=${redirect_uri}`
     });
   });
